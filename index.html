@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sridhar | Backend Dev</title>
+<meta name="description" content="Backend developer building Node.js and AWS serverless integrations for healthcare scheduling systems.">
+<meta property="og:title" content="Sridhar K | Backend Developer">
+<meta property="og:description" content="Node.js, AWS Lambda and MySQL integrations that connect EMR systems to Google, Outlook and patient workflows.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="favicon.png?v=2" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+<!-- EDIT: name, location, links. Replace every "Your ..." and "#" below. -->
+<aside class="side">
+  <h1>Sridhar K</h1>
+  <p class="role">Backend developer</p>
+  <p class="loc">Coimbatore, India</p>
+  <nav aria-label="Sections">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </nav>
+  <ul class="links">
+<li>
+  <a 
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=k.sridhar.dev@gmail.com" 
+    target="_blank" 
+    rel="noopener noreferrer">
+    Email
+  </a>
+</li>    
+    <li><a href="https://www.linkedin.com/in/sridhar-kumar-436284244/?isSelfProfile=true">LinkedIn</a></li>
+    <li><a href="https://github.com/sridhar39973">GitHub</a></li>
+<li>
+  <a 
+    href="https://drive.google.com/file/d/1EUG3seh7ovhp9k579Cz2HoccMG17HC_v/view?usp=sharing" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    onclick="downloadFromDrive('1EUG3seh7ovhp9k579Cz2HoccMG17HC_v')"
+  >
+    View Resume
+  </a>
+</li>
+
+<script>
+function downloadFromDrive(fileId) {
+  setTimeout(() => {
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    document.body.appendChild(iframe);
+    
+    setTimeout(() => iframe.remove(), 60000);
+  }, 500);
+}
+</script>
+</aside>
+
+<main>
+<section id="about">
+  <h2>About</h2>
+  <p>I'm a backend developer with two years of experience building Node.js and AWS serverless systems for healthcare scheduling. I automate file processing with Lambda, cut about 1,000 unnecessary API calls per month to lower costs, and store patient data encrypted to support HIPAA compliance.</p>
+  <ol class="flow" aria-label="Typical integration flow">
+    <li><b>Source</b>EMR systems: Athena, Cerner, ModMed, UrgentIQ</li>
+    <li><b>Ingest</b>API Gateway and Lambda (Node.js)</li>
+    <li><b>Store</b>MySQL with validation and logging</li>
+    <li><b>Deliver</b>Google, Outlook, patient reminders</li>
+  </ol>
+  <ul class="facts">
+    <li><strong>50</strong> practice locations live on Reserve with Google</li>
+    <li><strong>80+</strong> practices invoiced from my usage reports</li>
+    <li><strong>30+</strong> custom client reports delivered each month</li>
+    <li><strong>12 hrs</strong> of manual work saved per week by automation</li>
+  </ul>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <article class="entry">
+    <div class="entry-head"><h3>Software Developer, Your Company Private Limited</h3><span class="when">Aug 2024 to Sep 2026</span></div>
+    <p class="sub">Coimbatore</p>
+    <ul class="points">
+      <li>Led the end-to-end integration of "Reserve with Google" on my own (entity, action and services data feeds), giving real-time appointment booking visibility across 50 practice locations. The Product Head recognized it company-wide.</li>
+      <li>Took over 75% of a departing Data Analyst's reporting within one week by reverse-engineering undocumented query logic. Delivered provider-level product usage reports per location for 80+ practices, used directly for client invoicing. The CEO appreciated the seamless handover.</li>
+      <li>Retained an at-risk client by building a custom Node.js reporting pipeline from scratch, delivering 30+ reports per month in their exact required format.</li>
+      <li>As L2 support developer, fixed production issues with SQL and built Node.js automation scripts that cut about 12 hours of manual work per week.</li>
+      <li>Built appointment-pulling integrations between EMR systems and internal platforms using Node.js, MySQL and PHP, keeping patient scheduling data accurate and consistent.</li>
+    </ul>
+  </article>
+
+  <article class="entry">
+    <div class="entry-head"><h3>Software Developer Intern, KodNest Technologies</h3><span class="when">Jul 2023 to Mar 2024</span></div>
+    <p class="sub">Bengaluru</p>
+    <ul class="points">
+      <li>Built and maintained full-stack Java applications with Spring Boot, HTML, CSS and JavaScript.</li>
+      <li>Designed and managed MySQL databases for efficient storage and retrieval.</li>
+      <li>Built server-side applications with Node.js and Express.js.</li>
+    </ul>
+  </article>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <article class="entry">
+    <h3>Automated appointment processing</h3>
+    <p>A serverless pipeline that processes SIU and ADT files uploaded to S3. A Lambda function ingests and validates Cerner patient and appointment data, saves it to MySQL and triggers downstream patient reminder workflows, with error handling and monitoring.</p>
+    <p class="stack">Node.js, AWS Lambda, Amazon S3, MySQL</p>
+  </article>
+
+  <article class="entry">
+    <h3>AI phone scheduling and EMR integration</h3>
+    <p>Connected the First Outcomes AI phone scheduling system to the EMR through authenticated API Gateway endpoints. Patient lookup tries Yosi first and falls back to the EMR. The endpoints also expose provider availability and open slots, and keep create, reschedule and cancel events in sync across all three systems.</p>
+    <p class="stack">Node.js, AWS API Gateway, AWS Lambda, MySQL, REST APIs</p>
+  </article>
+
+  <article class="entry">
+    <h3>UrgentIQ bulk appointment pulling</h3>
+    <p>Fetches bulk appointment data from the UrgentIQ EMR APIs with token-based access, checks token expiry and stores encrypted patient data in MySQL. It runs as a Lambda workflow with CloudWatch logging and monitoring.</p>
+    <p class="stack">Node.js, MySQL, AWS Lambda, AWS CloudWatch</p>
+  </article>
+
+  <article class="entry">
+    <h3>ModMed and Outlook calendar sync</h3>
+    <p>Syncs ModMed EMR appointments with Microsoft Outlook calendars through the Microsoft Graph API. Create, update and cancel events flow both ways, and provider-level opt-in controls keep syncing accurate and cut manual calendar work.</p>
+    <p class="stack">Node.js, AWS Lambda, PHP, Microsoft Graph API</p>
+  </article>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>JavaScript, PHP, SQL, HTML, CSS</dd>
+    <dt>Backend</dt><dd>Node.js, Express.js, REST APIs</dd>
+    <dt>Cloud</dt><dd>AWS Lambda, S3, API Gateway, CloudWatch</dd>
+    <dt>Databases</dt><dd>MySQL, PostgreSQL, MongoDB</dd>
+    <dt>Tools</dt><dd>Postman, GitHub, Bitbucket, DBeaver, Excel</dd>
+  </dl>
+</section>
+
+<section id="education">
+  <h2>Education and certifications</h2>
+  <article class="entry">
+    <div class="entry-head"><h3>Master of Computer Applications</h3><span class="when">2021 to 2023</span></div>
+    <p class="sub">KGISL Institute of Information Management Coimbatore</p>
+  </article>
+  <article class="entry">
+    <div class="entry-head"><h3>Bachelor of Computer Applications</h3><span class="when">2018 to 2021</span></div>
+    <p class="sub">Sri Krishna Arts and Science College, Coimbatore</p>
+  </article>
+  <ul class="points">
+    <!-- <li>Java Full-Stack Development, KodNest</li>
+    <li>Responsive Web Design, freeCodeCamp</li> -->
+    <li>Java Full-Stack Development, <a href="https://drive.google.com/file/d/1oV3Dt7krasnMH0FwTpCHMtUAPAj5fuA1/view" target="_blank" rel="noopener noreferrer">KodNest</a></li>
+    <li>Responsive Web Design, <a href="https://drive.google.com/file/d/1uka7NUobUnLh-ZBh7VLnaupAikt0Dvez/view" target="_blank" rel="noopener noreferrer">freeCodeCamp</a></li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Get in touch</h2>
+  <p>I am open to backend roles. The quickest way to reach me is </p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=k.sridhar.dev@gmail.com" 
+    target="_blank" 
+    rel="noopener noreferrer">k.sridhar.dev@gmail.com</a>
+</section>
+</main>
+
+</div>
+</body>
+</html>
