@@ -27,9 +27,11 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#recognition">Appreciation</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
   <ul class="links">
@@ -111,7 +113,27 @@ function downloadFromDrive(fileId) {
     </ul>
   </article>
 </section>
+<section id="recognition">
+  <h2>Appreciation</h2>
 
+  <article class="entry">
+    <h3>Data and reporting continuity</h3>
+    <p class="sub">Recognized by the CEO</p>
+    <p>Acknowledged in a team announcement for taking over data and reporting requests while a teammate was away, and keeping stakeholder reporting on track after a short handover.</p>
+  </article>
+
+  <article class="entry">
+    <h3>Reserve with Google go-live</h3>
+    <p class="sub">Recognized by the Product Head</p>
+    <p>Credited when the integration was approved and went live. During Google's extended review, I uploaded appointment inventory feeds every day, weekends included, for over two months to complete validation and meet Google's guidelines.</p>
+  </article>
+
+  <article class="entry">
+    <h3>Saving an at-risk client</h3>
+    <p class="sub">Recognized by an L1 support teammate</p>
+    <p>Credited with helping retain a client who was close to leaving, by building a complex custom report (700+ lines of script) in the exact format their system accepts. The client and partner representatives gave positive feedback.</p>
+  </article>
+</section>
 <section id="projects">
   <h2>Projects</h2>
 
@@ -178,5 +200,19 @@ function downloadFromDrive(fileId) {
 </main>
 
 </div>
+<script>
+// Mobile only: tapping a section heading scrolls back to the top.
+(function () {
+  var mobile = window.matchMedia('(max-width: 820px)');
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('main h2').forEach(function (h) {
+    h.addEventListener('click', function () {
+      if (mobile.matches) {
+        window.scrollTo({ top: 0, behavior: calm.matches ? 'auto' : 'smooth' });
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>

@@ -19,6 +19,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
   margin: 0;
   background: var(--bg);
@@ -122,4 +123,20 @@ h3 { font-size: 1.05rem; font-weight: 600; margin: 0; }
   .facts { grid-template-columns: 1fr; }
   .skills { grid-template-columns: 1fr; gap: 2px; }
   .skills dd { margin-bottom: 10px; }
+
+  /* Tap a section heading to go back to the top */
+  main h2 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  main h2::after {
+    content: "Top \2191";
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--mute);
+  }
 }
