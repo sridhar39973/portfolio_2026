@@ -71,7 +71,7 @@
 <main>
 <section id="about">
   <h2>About</h2>
-  <p>I'm a backend developer with two years of experience building Node.js and AWS serverless systems for healthcare scheduling. I automate file processing with Lambda, cut about 1,000 unnecessary API calls per month to lower costs, and store patient data encrypted to support HIPAA compliance.</p>
+  <p>I'm a backend developer with two years of experience building Node.js and AWS serverless systems for healthcare scheduling. I automate file processing with Lambda. While processing appointments, I found that unnecessary Athena Telehealth API calls were being made for cancelled appointments, and I added a condition to skip them, cutting about 1,000 calls per month and lowering costs. I also store patient data encrypted in MySQL, following healthcare data-privacy practices.</p>
   <ol class="flow" aria-label="Typical integration flow">
     <li><b>Source</b>EMR systems: Athena, Cerner, ModMed, UrgentIQ</li>
     <li><b>Ingest</b>API Gateway and Lambda (Node.js)</li>
@@ -93,7 +93,7 @@
     <div class="entry-head"><h3>Software Developer, Yosicare Private Limited</h3><span class="when">Aug 2024 to Sep 2026</span></div>
     <p class="sub">Coimbatore</p>
     <ul class="points">
-      <li>Led the end-to-end integration of "Reserve with Google" on my own (entity, action and services data feeds), giving real-time appointment booking visibility across 50 practice locations. The Product Head recognized it company-wide.</li>
+      <li>Owned the end-to-end "Reserve with Google" integration (entity, action and services data feeds), enabling Book Online appointment booking from Google for 50 practice locations. The Product Head recognized it company-wide.</li>
       <li>Took over 75% of a departing Data Analyst's reporting within one week by reverse-engineering undocumented query logic. Delivered provider-level product usage reports per location for 80+ practices, used directly for client invoicing. The CEO appreciated the seamless handover.</li>
       <li>Retained an at-risk client by building a custom Node.js reporting pipeline from scratch, delivering 30+ reports per month in their exact required format.</li>
       <li>As L2 support developer, fixed production issues with SQL and built Node.js automation scripts that cut about 12 hours of manual work per week.</li>
